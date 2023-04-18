@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #121212;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: #222;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            position: relative;
+            width: 400px;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+            z-index: -1;
+        }
+
+        .container h1 {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .form-control {
+            position: relative;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+
+        .form-control label {
+            position: absolute;
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
+            color: #777;
+            font-size: 1.2em;
+            transition: all 0.3s ease-out;
+            z-index: -1;
+        }
+
+        .form-control input {
+            width: 100%;
+            background-color: transparent;
+            border: none;
+            border-bottom: 2px solid #444;
+            padding: 10px 20px;
+            color: #fff;
+            font-size: 1.5em;
+            transition: all 0.3s ease-out;
+        }
+
+        .form-control input:focus {
+            outline: none;
+            border-bottom-color: #4CAF50;
+        }
+
+        .form-control input:focus + label,
+        .form-control input:valid + label {
+            top: -10px;
+            font-size: 1em;
+            color: #fff;
+        }
+
+        .btn {
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 1.5em;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: all 0.3s ease-out;
+        }
+
+        .btn:hover {
+            background-color: #3e8e41;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Login</h1>
+        <form onsubmit="saveCredentials(event)">
+            <div class="form-control">
+                <input type="text" id="username" name="username" required>
+                <label for="username">Username</label>
+                <div class="form-control">
+                    <input type="password" id="password" name="password" required>
+                    <label for="password">Password</label>
+                </div>
+                <button class="btn" type="submit">Sign in</button>
+            </form>
+        </div>
+    
+        <script>
+            const inputs = document.querySelectorAll('.form-control input');
+    
+            function focusFunc() {
+                let parent = this.parentNode;
+                parent.classList.add('focus');
+            }
+    
+            function blurFunc() {
+                let parent = this.parentNode;
+                if (this.value == "") {
+                    parent.classList.remove('focus');
+                }
+            }
+    
+            inputs.forEach(input => {
+                input.addEventListener('focus', focusFunc);
+                input.addEventListener('blur', blurFunc);
+            });
+    
+            function saveCredentials(event) {
+                event.preventDefault();
+                const username = document.getElementById('username').value;
+                const password = document.getElementById('password').value;
+                localStorage.setItem('username', username);
+                localStorage.setItem('password', password);
+                window.location.href = 'home.html';
+            }
+        </script>
+    </body>
+    </html>
+    
