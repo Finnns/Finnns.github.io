@@ -1,11 +1,24 @@
-.botao-download {
-    display: inline-block;
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    border-radius: 5px;
-  }
+#bota {
+  background-color: #8e4caf;
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: 0.4s;
+}
+#bota:hover {
+  background-color: #632f7d;
+  color: white;
+}
+#bota:active {
+  background-color: #50236b;
+  box-shadow: 0 2px #666;
+  transform: translateY(-4px)
+}
   
