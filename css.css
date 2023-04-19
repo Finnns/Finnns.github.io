@@ -1,3 +1,8 @@
+#texto1 {
+  color: white;
+  font-size: 150%;
+  font-family: Arial, Helvetica, sans-serif;
+}
 #bota {
   background-color: #8e4caf;
   border: none;
@@ -21,4 +26,66 @@
   box-shadow: 0 2px #666;
   transform: translateY(-4px)
 }
-  
+body {
+  background-color: #1d1d1d;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 50px 0;
+}
+h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+p {
+  font-size: 20px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+.btn {
+  background-color: #ff0000;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 18px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: #e60000;
+}
+header {
+	background-color: #333;
+	height: 45px;
+  border-radius: 10px;
+}
+
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+nav li {
+	float: left;
+}
+
+nav li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+nav li a:hover {
+	background-color: #111;
+  border-radius: 10px;
+}
