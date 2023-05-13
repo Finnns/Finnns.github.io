@@ -1,10 +1,10 @@
-#texto1 {
+#textoDownload {
   color: white;
   font-size: 150%;
   font-family: Arial, Helvetica, sans-serif;
 }
 #imagem {
-  height: 250px;
+  height: 20em;
   border-radius: 20px;
 }
 body {
@@ -28,20 +28,7 @@ p {
   line-height: 1.6;
   margin-bottom: 30px;
 }
-.btn {
-  background-color: #ff0000;
-  border: none;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 4px;
-  font-size: 18px;
-  text-transform: uppercase;
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-.btn:hover {
-  background-color: #e60000;
-}
+
 header {
 	background-color: #1d1d1d;
 	height: 45px;
@@ -59,7 +46,7 @@ nav li {
 }
 
 nav li a {
-  background-color: #8e4caf;
+  background-color: #048100;
   border: none;
 	display: inline-block;
 	color: white;
@@ -67,22 +54,22 @@ nav li a {
 	padding: 14px 24px;
 	text-decoration: none;
   border-radius: 10px;
-  transition: 0.4s;
+  transition: 0.1s;
   cursor: pointer;
   margin: 4px 2px;
 }
 
 nav li a:hover {
-	background-color: #632f7d;
+	background-color: #086600;
   border-radius: 10px;
 }
 nav li a:active {
-  background-color: #50236b;
+  background-color: #007c0a;
   box-shadow: 0 2px #666;
   transform: translateY(-4px);
 }
 #bota {
-  background-color: #8e4caf;
+  background-color: #048100;
   border: none;
   color: white;
   padding: 12px 24px;
@@ -93,14 +80,14 @@ nav li a:active {
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 10px;
-  transition: 0.4s;
+  transition: 0.1s;
 }
 #bota:hover {
-  background-color: #632f7d;
+  background-color: #086600;
   color: white;
 }
 #bota:active {
-  background-color: #50236b;
+  background-color: #007c0a;
   box-shadow: 0 2px #666;
   transform: translateY(-4px)
 }
